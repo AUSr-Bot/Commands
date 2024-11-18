@@ -73,21 +73,59 @@
         <tr><td>!base 1 to !base 7</td><td>Baseline ninja tracks.</td></tr>
     </table>
     
-    <h2>MOD Commands</h2>
-    <table>
-        <tr>
-            <th>Command</th>
-            <th>Description</th>
-            <th>Variables</th>
-        </tr>
-        <tr><td>@AUSr_Bot</td><td>Usage: @AUSr_Bot activate dan mode.</td><td></td></tr>
-        <tr><td>@AUSr_Bot</td><td>Usage: @AUSr_Bot deactivate dan mode.</td><td></td></tr>
-        <tr><td>!addcom</td><td>Usage: !addcom !commandname command text.</td><td>&lt;@targetusername&gt;</td></tr>
-        <tr><td>!delcom</td><td>Usage: !delcom !commandname.</td><td></td></tr>
-        <tr><td>!addcount</td><td>Usage: !addcount !countername.</td><td>&lt;counter&gt;</td></tr>
-        <tr><td>!delcount</td><td>Usage: !delcount !countername.</td><td></td></tr>
-        <tr><td>!addpoints</td><td>Usage: !addpoints @username 100</td><td></td></tr>
-    </table>
+<h2>MOD Commands</h2>
+<table>
+    <tr>
+        <th>Command</th>
+        <th>Description</th>
+        <th>Variables</th>
+    </tr>
+    <tr>
+        <td>@AUSr_Bot</td>
+        <td>Usage: @AUSr_Bot activate dan mode.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>@AUSr_Bot</td>
+        <td>Usage: @AUSr_Bot deactivate dan mode.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>!addcom</td>
+        <td>Usage: !addcom !commandname command text.</td>
+        <td>&lt;@targetusername&gt;</td>
+    </tr>
+    <tr>
+        <td>!delcom</td>
+        <td>Usage: !delcom !commandname.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>!addcount</td>
+        <td>
+            Usage: !addcount !countername.<br>
+            Example: !addcount !deaths "You have died &lt;counter&gt; times."<br><br>
+            <b>Increment by 1:</b><br>
+            <code>!deaths +</code> → "You have died 1 times."<br><br>
+            <b>Decrement by 1:</b><br>
+            <code>!deaths -</code> → "You have died 0 times."<br><br>
+            <b>Increment by a Specific Number:</b><br>
+            <code>!deaths +8</code> → "You have died 8 times."
+        </td>
+        <td>&lt;counter&gt;</td>
+    </tr>
+    <tr>
+        <td>!delcount</td>
+        <td>Usage: !delcount !countername.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>!addpoints</td>
+        <td>Usage: !addpoints @username 100</td>
+        <td></td>
+    </tr>
+</table>
+
     
     <h2>Channels</h2>
     <table>
