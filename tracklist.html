@@ -12,18 +12,18 @@
     <ol id="tracklist"></ol>
 
 <script>
-    fetch('tracklist.txt')
-        .then(response => response.text())
-        .then(data => {
-            const tracks = data.split('\n').filter(line => line.trim() !== '');
-            const tracklistElement = document.getElementById('tracklist');
-            tracks.forEach(track => {
-                const li = document.createElement('li');
-                li.textContent = track.trim(); // Use the content as-is
-                tracklistElement.appendChild(li);
-            });
-        })
-        .catch(error => console.error('Error fetching tracklist:', error));
+fetch('tracklist.txt')
+    .then(response => response.text())
+    .then(data => {
+        const tracks = data.split('\n').filter(line => line.trim() !== '');
+        const tracklistElement = document.getElementById('tracklist');
+        tracks.forEach(track => {
+            const li = document.createElement('li');
+            li.textContent = track.trim();
+            tracklistElement.appendChild(li);
+        });
+    })
+    .catch(error => console.error('Error fetching tracklist:', error));
 </script>
 </body>
 </html>
