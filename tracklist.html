@@ -11,20 +11,19 @@
     <h1>Tracklist</h1>
     <ol id="tracklist"></ol>
 
-    <script>
-        // Fetch the tracklist from tracklist.txt
-        fetch('tracklist.txt')
-            .then(response => response.text())
-            .then(data => {
-                const tracks = data.split('\n').filter(line => line.trim() !== '');
-                const tracklistElement = document.getElementById('tracklist');
-                tracks.forEach((track, index) => {
-                    const li = document.createElement('li');
-                    li.textContent = `${index + 1}. ${track}`;
-                    tracklistElement.appendChild(li);
-                });
-            })
-            .catch(error => console.error('Error fetching tracklist:', error));
-    </script>
+<script>
+    fetch('tracklist.txt')
+        .then(response => response.text())
+        .then(data => {
+            const tracks = data.split('\n').filter(line => line.trim() !== '');
+            const tracklistElement = document.getElementById('tracklist');
+            tracks.forEach(track => {
+                const li = document.createElement('li');
+                li.textContent = track.trim(); // Use the content as-is
+                tracklistElement.appendChild(li);
+            });
+        })
+        .catch(error => console.error('Error fetching tracklist:', error));
+</script>
 </body>
 </html>
