@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUSr_Bot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+            background-color: #060530;
+            color: #f3f3f3;
+        }
+        h1, h2 {
+            color: #ffffff;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #494f8a;
+        }
+        a {
+            color: #7700ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            max-width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>AUSr_Bot</h1>
+    <img src="https://i.imgur.com/ohpBYCU.png" alt="AUSr_Bot">
+<!-- Menu -->
+<nav id="menu">
+    <ul class="links">
+        <li><a href="index.html">Home</a></li>
+    
+    <h2>Commands</h2>
+    <table>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+        <tr><td>@AUSr_Bot</td><td>@ the bot with your questions.</td></tr>
+        <tr><td>!shoutout @Username</td><td>Check out @username at <a href="https://twitch.tv/AUSr_Bot">https://twitch.tv/AUSr_Bot</a> — they were last playing game name. Give them a follow! Automatic shoutout for raids.</td></tr>
+        <tr><td>!uptime</td><td>Shows the how long the stream has been live.</td></tr>
+        <tr><td>!8ball</td><td>Magic 8-Ball response.</td></tr>
+        <tr><td>!points</td><td>Shows how many points you have across all channels using AUSr_Bot. 1 point per message sent.</td></tr>
+        <tr><td>!gamble</td><td>Usage: !gamble number or all.</td></tr>
+        <tr><td>!duel</td><td>Usage: !duel @username amount.</td></tr>
+        <tr><td>!top</td><td>Shows the top 5 users points.</td></tr>
+        <tr><td>!addtrack - !tr</td><td>Request a track to play.</td></tr>
+        <tr><td>!tracklist</td><td>Shows the last 5 tracks added.</td></tr>
+        <tr><td>!race</td><td>Random Gran Turismo 7 track from anywhere on career.</td></tr>
+        <tr><td>!track</td><td>Random Trials Rising track from anywhere on career.</td></tr>
+        <tr><td>!bike</td><td>Random Trials Rising bike.</td></tr>
+        <tr><td>!lvl 1 to !lvl 7</td><td>Random ninja track in Track Central.</td></tr>
+        <tr><td>!base 1 to !base 7</td><td>Baseline ninja tracks.</td></tr>
+    </table>
+    
+<h2>MOD Commands</h2>
+<table>
+    <tr>
+        <th>Command</th>
+        <th>Description</th>
+        <th>Variables</th>
+    </tr>
+    <tr>
+        <td>@AUSr_Bot</td>
+        <td>Usage: @AUSr_Bot activate dan mode.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>@AUSr_Bot</td>
+        <td>Usage: @AUSr_Bot deactivate dan mode.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>!addcom</td>
+        <td>Usage: !addcom !commandname command text.</td>
+        <td>&lt;@targetusername&gt;</td>
+    </tr>
+    <tr>
+        <td>!delcom</td>
+        <td>Usage: !delcom !commandname.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>!addcount</td>
+        <td>
+            Usage: !addcount !countername.<br>
+            Example: !addcount !deaths "You have died &lt;counter&gt; times."<br><br>
+            <b>Increment by 1:</b><br>
+            <code>!deaths +</code> → "You have died 1 times."<br><br>
+            <b>Decrement by 1:</b><br>
+            <code>!deaths -</code> → "You have died 0 times."<br><br>
+            <b>Increment by a Specific Number:</b><br>
+            <code>!deaths +8</code> → "You have died 8 times."
+        </td>
+        <td>&lt;counter&gt;</td>
+    </tr>
+    <tr>
+        <td>!delcount</td>
+        <td>Usage: !delcount !countername.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>!addpoints</td>
+        <td>Usage: !addpoints @username 100</td>
+        <td></td>
+    </tr>
+</table>
+
+    <h2>Test it here</h2>
+<iframe id="twitch-chat-embed"
+        src="https://www.twitch.tv/embed/ausr_bot/chat?parent=ausr-bot.online&theme=darkpopout" 
+        height="500"
+        width="350">
+</iframe>
+
+    <h2>Channels</h2>
+    <table>
+        <tr>
+            <th>Profile Picture</th>
+            <th>Channel Name</th>
+        </tr>
+        <tr>
+            <td><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/2fba3a35-3d23-44a3-914b-9c5d9114c8a0-profile_image-70x70.png" alt="AUSr_Bot"></td>
+            <td><a href="https://www.twitch.tv/AUSr_Bot">AUSr_Bot</a></td>
+        </tr>
+        <tr>
+            <td><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/8c777cef-8bd8-48ae-9b3b-df726c5e64d3-profile_image-70x70.png" alt="AUSr_Krip"></td>
+            <td><a href="https://www.twitch.tv/AUSr_Krip">AUSr_Krip</a></td>
+        </tr>
+        <tr>
+            <td><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/59476d59-e21b-4610-aa69-8f5fb838d4e3-profile_image-70x70.jpeg" alt="Lookwhotalkin"></td>
+            <td><a href="https://www.twitch.tv/Lookwhotalkin">Lookwhotalkin</a></td>
+        </tr>
+        <tr>
+            <td><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/42221747-4961-4703-bee9-e4cac81b610d-profile_image-70x70.png" alt="Slabzy"></td>
+            <td><a href="https://www.twitch.tv/Slabzy">Slabzy</a></td>
+        </tr>
+        <tr>
+            <td><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/236c0e60-2980-4155-883d-3b0b9ce2c8b0-profile_image-70x70.png" alt="DaddyDier"></td>
+            <td><a href="https://www.twitch.tv/DaddyDier">DaddyDier</a></td>
+        </tr>
+        <tr>
+            <td><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/caec83c5-79f2-439d-b66a-3b0048a85528-profile_image-70x70.png" alt="EpicFatLip"></td>
+            <td><a href="https://www.twitch.tv/EpicFatLip">EpicFatLip</a></td>
+        </tr>
+        <tr>
+            <td><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/4f9909ea-e2c0-4407-bc89-65990dc71974-profile_image-70x70.png" alt="Realwstr"></td>
+            <td><a href="https://www.twitch.tv/Realwstr">Realwstr</a></td>
+        </tr>
+        <tr>
+            <td><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/c4752503-f354-4d97-8019-afc9fecbdbef-profile_image-70x70.png" alt="Muzzzaa"></td>
+            <td><a href="https://www.twitch.tv/Muzzzaa">Muzzzaa</a></td>
+        </tr>
+        <tr>
+            <td><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/0c6ecff4-f67c-42a2-b86e-772fbf949797-profile_image-70x70.jpeg" alt="xembolo1979x"></td>
+            <td><a href="https://www.twitch.tv/xembolo1979x">xembolo1979x</a></td>
+        </tr>
+        <tr>
+            <td><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/6d5ff8a6-fbb3-4ef0-8bcc-9119b26c584f-profile_image-70x70.png" alt="ChasmFlaps"></td>
+            <td><a href="https://www.twitch.tv/ChasmFlaps">ChasmFlaps</a></td>
+        </tr>
+    </table>
+</body>
+</html>
