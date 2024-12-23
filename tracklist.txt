@@ -1,20 +1,2 @@
 AUSr_Krip passed track test 5 with 22 faults on 23/12/2024
 AUSr_Krip passed tracktest5 with 22 faults on 23/12/2024
-AUSr_Krip passed tracktest3 with 12 on 23/12/2024
-AUSr_Krip passed tracktest2 with 11 on 23/12/2024
-AUSr_Krip passed tracktest with 11 on 23/12/2024
-AUSr_Krip passed trackname with 124 faults on 23/12/2024
-AUSr_Krip passed trackname with 123 faults on 23/12/2024
-AUSr_Krip passed trackname with 101 on 23/12/2024
-AUSr_Krip passed trackname with 99 on 23/12/2024
-AUSr_Krip passed trackname with 99 faults on 23/12/2024
-AUSr_Krip passed trackname on 23/12/2024
-AUSr_Krip passed track with 88 on 23/12/2024
-AUSr_Krip passed track with 88 faults on 23/12/2024
-AUSr_Krip passed track with 77 faults on 23/12/2024
-AUSr_Krip passed random track 3 on 23/12/2024
-AUSr_Krip passed Track Test 1 on 23/12/2024
-AUSr_Krip passed Track Name on 23/12/2024
-AUSr_Krip passed Track Name 27 on 23/12/2024
-AUSr_Krip passed test track on 23/12/2024
-AUSr_Krip passed test track 66 on 23/12/2024
