@@ -1,3 +1,4 @@
+AUSr_Krip passed test track 66 on 23/12/2024
 AUSr_Krip passed test track with 2 faults on 23/12/2024
 AUSr_Krip passed test track 1 on 23/12/2024
 AUSr_Krip passed Alca Trials 2 on 23/12/2024
