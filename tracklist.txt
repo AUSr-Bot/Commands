@@ -1,4 +1,2 @@
 AUSr_Krip passed Eclipse Protocol (Full) with 218 faults on 24/12/2024
 AUSr_Krip passed Ephemeral with 127 faults on 24/12/2024
-AUSr_Krip passed track test 5 with 22 faults on 23/12/2024
-AUSr_Krip passed tracktest5 with 22 faults on 23/12/2024
