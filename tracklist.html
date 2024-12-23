@@ -15,13 +15,15 @@
     </style>
 </head>
 <body>
+
+	<nav id="menu">
+	<ul class="links">
+        <li><a href="index.html">Home</a></li>
+	<li><a href="commands.html">Commands</a></li>
+		
     <h1>Tracklist</h1>
     <ol id="tracklist"></ol>
-<!-- Menu -->
-							<nav id="menu">
-								<ul class="links">
-                                    <li><a href="index.html">Home</a></li>
-									<li><a href="commands.html">Commands</a></li>
+
 <script>
 fetch('tracklist.txt')
     .then(response => response.text())
