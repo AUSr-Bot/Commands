@@ -2,41 +2,104 @@
 <html>
 <head>
     <title>Passlist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body { 
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 20px;
+            margin: 0;
             padding: 0;
             background-color: #060530;
             color: #f3f3f3;
         }
-        ol { padding-left: 20px; }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #f3c623;
+        }
+        ol {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+        ol li {
+            margin: 5px 0;
+        }
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            body {
+                margin: 10px;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+            nav ul li a {
+                font-size: 1em;
+            }
+            ol {
+                padding: 5px 10px;
+                font-size: 0.9em;
+            }
+        }
+        /* Style adjustments for larger screens */
+        @media (min-width: 1200px) {
+            nav ul li a {
+                font-size: 1.4em;
+            }
+            ol {
+                font-size: 1.1em;
+            }
+        }
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="commands.html">Commands</a></li>
+        </ul>
+    </nav>
 
-	<nav id="menu">
-	<ul class="links">
-        <li><a href="index.html">Home</a></li>
-	<li><a href="commands.html">Commands</a></li>
-		
     <h1>Passlist</h1>
     <ol id="tracklist"></ol>
 
-<script>
-fetch('tracklist.txt')
-    .then(response => response.text())
-    .then(data => {
-        const tracks = data.split('\n').filter(line => line.trim() !== '');
-        const tracklistElement = document.getElementById('tracklist');
-        tracks.forEach(track => {
-            const li = document.createElement('li');
-            li.textContent = track.trim();
-            tracklistElement.appendChild(li);
-        });
-    })
-    .catch(error => console.error('Error fetching tracklist:', error));
-</script>
+    <script>
+        fetch('tracklist.txt')
+            .then(response => response.text())
+            .then(data => {
+                const tracks = data.split('\n').filter(line => line.trim() !== '');
+                const tracklistElement = document.getElementById('tracklist');
+                tracks.forEach(track => {
+                    const li = document.createElement('li');
+                    li.textContent = track.trim();
+                    tracklistElement.appendChild(li);
+                });
+            })
+            .catch(error => console.error('Error fetching tracklist:', error));
+    </script>
 </body>
 </html>
