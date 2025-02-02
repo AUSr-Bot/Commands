@@ -1,90 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Passlist</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body { 
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #060530;
-            color: #f3f3f3;
-        }
-        h1 {
-            text-align: center;
-            margin: 20px 0;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            padding: 10px 0;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            transition: color 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #f3c623;
-        }
-        ol {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 10px 20px;
-            font-size: 1em;
-        }
-        ol li {
-            margin: 5px 0;
-        }
-        /* Responsive design for smaller screens */
-        @media (max-width: 768px) {
-            body {
-                margin: 10px;
-            }
-            nav ul li {
-                margin: 0 10px;
-            }
-            nav ul li a {
-                font-size: 1em;
-            }
-            ol {
-                padding: 5px 10px;
-                font-size: 0.9em;
-            }
-        }
-        /* Style adjustments for larger screens */
-        @media (min-width: 1200px) {
-            nav ul li a {
-                font-size: 1.4em;
-            }
-            ol {
-                font-size: 1.1em;
-            }
-        }
-    </style>
+    <title>AUSr_Bot - Passlist</title>
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body>
-    <nav>
-        <ul>
+<body class="is-preload">
+
+    <!-- Header -->
+    <header id="header">
+        <h1>Passlist</h1>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <ul class="links">
             <li><a href="index.html">Home</a></li>
             <li><a href="commands.html">Commands</a></li>
         </ul>
     </nav>
 
-    <h1>Passlist</h1>
     <ol id="tracklist"></ol>
 
     <script>
@@ -101,5 +37,7 @@
             })
             .catch(error => console.error('Error fetching tracklist:', error));
     </script>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
