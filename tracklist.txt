@@ -1,3 +1,4 @@
+AUSr_Krip passed Throttle Flex with 70 faults on 05/05/2025
 AUSr_Krip passed Diwaron [BW] with 322 faults on 05/05/2025
 AUSr_Krip passed Donkey Bounces with 3 faults on 28/01/2025
 AUSr_Krip passed Kaizen [50 CP] with 225 faults on 15/01/2025
