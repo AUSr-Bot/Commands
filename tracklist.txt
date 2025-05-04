@@ -1,3 +1,4 @@
+AUSr_Krip passed Aurex [BW] with 17 faults on 05/05/2025
 AUSr_Krip passed FANCY [BW] with 184 faults on 05/05/2025
 AUSr_Krip passed Cool Climbing with 58 faults on 05/05/2025
 AUSr_Krip passed Instrument [Ez] with 48 faults on 05/05/2025
