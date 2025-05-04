@@ -1,76 +1,95 @@
 <!DOCTYPE HTML>
-<!--
-	Eventually by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>AUSr_Bot</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<head>
+  <title>AUSr_Bot</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    .clip-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    }
 
-		<!-- Header -->
-			<header id="header">
-				<h1>AUSr_Bot</h1>
-			    <img src="https://i.imgur.com/ohpBYCU.png" alt="AUSr_Bot">
-    			<p>🤖 Node.js-Powered Twitch Bot 🎮</p>
-				<p>If you'd like to have this bot in your channel or have suggestions for commands or ideas to improve the bot? Feel free to send AUSr_Krip a DM on Discord: <a href="https://discordapp.com/invite/QUkEEvb" target="_blank">https://discordapp.com/invite/QUkEEvb</a></p>
-			</header>
+    .clip-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body class="is-preload">
 
-							<!-- Menu -->
-							<nav id="menu">
-								<ul class="links">
-									<li><a href="commands.html">Commands</a></li>
-									<li><a href="tracklist.html">Passlist</a></li>
-									<li><a href="channels.html">Channels</a></li>
-									<h2>Featured Twitch Clips</h2>
-									<iframe
-									  id="twitchPlayer"
-									  width="640"
-									  height="360"
-									  allowfullscreen
-									  src="https://clips.twitch.tv/embed?clip=EsteemedRepleteLionPunchTrees-ZZZFbwwWceuX9-le&parent=ausr-bot.online&autoplay=true">
-									</iframe>
-								  </section>
-								  
-								  <script>
-									const clips = [
-									  "EsteemedRepleteLionPunchTrees-ZZZFbwwWceuX9-le", // Krip 12sec
-									  "GentleDaintyWalletKippa-9X-9II1dmfCiaZz2", // Slabzy 27sec
-									  "AlertAgileHyenaTooSpicy-X0ZL4tznkTaQoRHn", // John 10sec
-									  "DoubtfulConsiderateWombatRedCoat-iANmWilj5VdZ7Imw", // Krip 31sec
-									  "ToughRelentlessChickpeaWholeWheat", // Slabzy 11sec
-									  "AlluringBraveClamPeoplesChamp-63pllwYxhhcjC_7l", // John 20sec
-									  "CharmingTastySnoodDeIlluminati-9LyB7cHLnOuI_6jU", // Krip 21sec
-									  "AbstruseEnthusiasticWalrusPRChase", // Slabzy 8sec
-									  "ObeseEnticingStinkbugPipeHype-Je5RAHDYA2a-JNH8" // John 12sec
-									];
-								  
-									const clipDurations = [12, 27, 10, 31, 11, 20, 21, 8, 12]; // approximate durations in seconds
-									let current = 0;
-									const player = document.getElementById("twitchPlayer");
-								  
-									function loadNextClip() {
-									  current = (current + 1) % clips.length; // loop back to first clip
-									  player.src = `https://clips.twitch.tv/embed?clip=${clips[current]}&parent=ausr-bot.online&autoplay=true`;
-									}
-								  
-									function startClipCycle() {
-									  setTimeout(() => {
-										loadNextClip();
-										startClipCycle();
-									  }, clipDurations[current] * 1000);
-									}
-								  
-									startClipCycle();
-								  </script>
+  <!-- Header -->
+  <header id="header">
+    <h1>AUSr_Bot</h1>
+    <img src="https://i.imgur.com/ohpBYCU.png" alt="AUSr_Bot">
+    <p>🤖 Node.js-Powered Twitch Bot 🎮</p>
+    <p>
+      If you'd like to have this bot in your channel or have suggestions for commands or ideas to improve the bot?
+      Feel free to send AUSr_Krip a DM on Discord:
+      <a href="https://discordapp.com/invite/QUkEEvb" target="_blank">https://discordapp.com/invite/QUkEEvb</a>
+    </p>
+  </header>
 
-		<!-- Scripts -->
-			<script src="assets/js/main.js"></script>
+  <!-- Menu -->
+  <nav id="menu">
+    <ul class="links">
+      <li><a href="commands.html">Commands</a></li>
+      <li><a href="tracklist.html">Passlist</a></li>
+      <li><a href="channels.html">Channels</a></li>
+    </ul>
+  </nav>
 
-	</body>
+  <!-- Twitch Clips Section -->
+  <section id="twitch-clips" style="margin: 2em auto; text-align: center;">
+    <h2>Featured Twitch Clips</h2>
+    <div class="clip-container">
+      <iframe
+        id="twitchPlayer"
+        allowfullscreen
+        src="https://clips.twitch.tv/embed?clip=EsteemedRepleteLionPunchTrees-ZZZFbwwWceuX9-le&parent=ausr-bot.online&autoplay=true">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Clip Rotation Script -->
+  <script>
+    const clips = [
+      "EsteemedRepleteLionPunchTrees-ZZZFbwwWceuX9-le", // Krip 12sec
+      "GentleDaintyWalletKippa-9X-9II1dmfCiaZz2",       // Slabzy 27sec
+      "AlertAgileHyenaTooSpicy-X0ZL4tznkTaQoRHn",       // John 10sec
+      "DoubtfulConsiderateWombatRedCoat-iANmWilj5VdZ7Imw", // Krip 31sec
+      "ToughRelentlessChickpeaWholeWheat",              // Slabzy 11sec
+      "AlluringBraveClamPeoplesChamp-63pllwYxhhcjC_7l", // John 20sec
+      "CharmingTastySnoodDeIlluminati-9LyB7cHLnOuI_6jU", // Krip 21sec
+      "AbstruseEnthusiasticWalrusPRChase",              // Slabzy 8sec
+      "ObeseEnticingStinkbugPipeHype-Je5RAHDYA2a-JNH8"   // John 12sec
+    ];
+
+    const clipDurations = [12, 27, 10, 31, 11, 20, 21, 8, 12]; // in seconds
+    let current = 0;
+    const player = document.getElementById("twitchPlayer");
+
+    function loadNextClip() {
+      current = (current + 1) % clips.length;
+      player.src = `https://clips.twitch.tv/embed?clip=${clips[current]}&parent=ausr-bot.online&autoplay=true`;
+    }
+
+    function startClipCycle() {
+      setTimeout(() => {
+        loadNextClip();
+        startClipCycle();
+      }, clipDurations[current] * 1000);
+    }
+
+    startClipCycle();
+  </script>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
 </html>
