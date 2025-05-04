@@ -1,98 +1,159 @@
 <!DOCTYPE HTML>
-<!--
-	Eventually by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>AUSr_Bot</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-<style>
-  .clip-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 100%;
-    margin: 2em auto;
-  }
+  <head>
+    <title>AUSr_Bot</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      /* Override body padding and flexbox to prevent clipping */
+      body {
+        padding-top: 1em !important; /* Reduce top padding */
+        display: block !important; /* Disable flexbox centering */
+        margin: 0;
+        overflow-x: hidden;
+      }
+      /* Ensure header is fully visible */
+      #header {
+        position: relative !important;
+        top: 0 !important;
+        width: 100%;
+        padding: 1em !important;
+        box-sizing: border-box;
+        text-align: center;
+        z-index: 1000;
+      }
+      /* Constrain header content */
+      #header h1 {
+        font-size: 2.5em !important; /* Slightly smaller for safety */
+        margin: 0.5em 0;
+      }
+      #header p {
+        font-size: 1.2em !important;
+        margin: 0.5em 0;
+      }
+      #header img {
+        max-width: 250px;
+        max-height: 150px;
+        display: block;
+        margin: 0.5em auto;
+      }
+      /* Override preload styles */
+      body.is-preload, body.is-preload #header {
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transition: none !important;
+      }
+      /* Adjust content sections */
+      nav#menu, section#twitch-clips {
+        margin-top: 2em;
+      }
+      /* Twitch clip styles */
+      .clip-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        margin: 2em auto;
+      }
+      .clip-wrapper iframe {
+        width: 100%;
+        max-width: 960px;
+        aspect-ratio: 16 / 9;
+        border: none;
+      }
+      /* Responsive adjustments */
+      @media screen and (max-width: 736px) {
+        body {
+          padding: 1em !important;
+        }
+        #header h1 {
+          font-size: 1.8em !important;
+        }
+        #header p {
+          font-size: 1em !important;
+        }
+        #header img {
+          max-width: 200px;
+          max-height: 120px;
+        }
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+    <!-- Header -->
+    <header id="header">
+      <h1>AUSr_Bot</h1>
+      <img src="https://i.imgur.com/ohpBYCU.png" alt="AUSr_Bot">
+      <p>🤖 Node.js-Powered Twitch Bot 🎮</p>
+      <p>If you'd like to have this bot in your channel or have suggestions for commands or ideas to improve the bot? Feel free to send AUSr_Krip a DM on Discord: <a href="https://discordapp.com/invite/QUkEEvb" target="_blank">https://discordapp.com/invite/QUkEEvb</a></p>
+    </header>
 
-  .clip-wrapper iframe {
-    width: 100%;
-    max-width: 960px;
-    aspect-ratio: 16 / 9;
-    border: none;
-  }
-</style>
-	</head>
-	<body class="is-preload">
+    <!-- Menu -->
+    <nav id="menu">
+      <ul class="links">
+        <li><a href="commands.html">Commands</a></li>
+        <li><a href="tracklist.html">Passlist</a></li>
+        <li><a href="channels.html">Channels</a></li>
+      </ul>
+    </nav>
 
-		<!-- Header -->
-		<header id="header">
-			<h1>AUSr_Bot</h1>
-			<img src="https://i.imgur.com/ohpBYCU.png" alt="AUSr_Bot">
-			<p>🤖 Node.js-Powered Twitch Bot 🎮</p>
-			<p>If you'd like to have this bot in your channel or have suggestions for commands or ideas to improve the bot? Feel free to send AUSr_Krip a DM on Discord: <a href="https://discordapp.com/invite/QUkEEvb" target="_blank">https://discordapp.com/invite/QUkEEvb</a></p>
-		</header>
+    <!-- Twitch Clips Section -->
+    <section id="twitch-clips">
+      <h2 style="text-align:center;">Featured Twitch Clips</h2>
+      <div class="clip-wrapper">
+        <iframe
+          id="twitchPlayer"
+          allowfullscreen
+          src="https://clips.twitch.tv/embed?clip=EsteemedRepleteLionPunchTrees-ZZZFbwwWceuX9-le&parent=ausr-bot.online&autoplay=true">
+        </iframe>
+      </div>
+    </section>
 
-		<!-- Menu -->
-		<nav id="menu">
-			<ul class="links">
-				<li><a href="commands.html">Commands</a></li>
-				<li><a href="tracklist.html">Passlist</a></li>
-				<li><a href="channels.html">Channels</a></li>
-			</ul>
-		</nav>
+    <!-- Scripts -->
+    <script>
+      // Force remove is-preload on load
+      window.addEventListener('load', () => {
+        document.body.classList.remove('is-preload');
+        // Ensure header is visible
+        const header = document.getElementById('header');
+        header.style.transform = 'none';
+        header.style.opacity = '1';
+        header.style.visibility = 'visible';
+      });
 
-		<!-- Twitch Clips Section -->
-<section id="twitch-clips">
-  <h2 style="text-align:center;">Featured Twitch Clips</h2>
-  <div class="clip-wrapper">
-    <iframe
-      id="twitchPlayer"
-      allowfullscreen
-      src="https://clips.twitch.tv/embed?clip=EsteemedRepleteLionPunchTrees-ZZZFbwwWceuX9-le&parent=ausr-bot.online&autoplay=true">
-    </iframe>
-  </div>
-</section>
+      // Twitch clip cycling
+      const clips = [
+        "EsteemedRepleteLionPunchTrees-ZZZFbwwWceuX9-le",
+        "GentleDaintyWalletKippa-9X-9II1dmfCiaZz2",
+        "AlertAgileHyenaTooSpicy-X0ZL4tznkTaQoRHn",
+        "DoubtfulConsiderateWombatRedCoat-iANmWilj5VdZ7Imw",
+        "ToughRelentlessChickpeaWholeWheat",
+        "AlluringBraveClamPeoplesChamp-63pllwYxhhcjC_7l",
+        "CharmingTastySnoodDeIlluminati-9LyB7cHLnOuI_6jU",
+        "AbstruseEnthusiasticWalrusPRChase",
+        "ObeseEnticingStinkbugPipeHype-Je5RAHDYA2a-JNH8"
+      ];
+      const clipDurations = [12, 27, 10, 31, 11, 20, 21, 8, 12];
+      let current = 0;
+      const player = document.getElementById("twitchPlayer");
 
-		<!-- Twitch Clips Script -->
-		<script>
-			const clips = [
-				"EsteemedRepleteLionPunchTrees-ZZZFbwwWceuX9-le", // Krip 12sec
-				"GentleDaintyWalletKippa-9X-9II1dmfCiaZz2", // Slabzy 27sec
-				"AlertAgileHyenaTooSpicy-X0ZL4tznkTaQoRHn", // John 10sec
-				"DoubtfulConsiderateWombatRedCoat-iANmWilj5VdZ7Imw", // Krip 31sec
-				"ToughRelentlessChickpeaWholeWheat", // Slabzy 11sec
-				"AlluringBraveClamPeoplesChamp-63pllwYxhhcjC_7l", // John 20sec
-				"CharmingTastySnoodDeIlluminati-9LyB7cHLnOuI_6jU", // Krip 21sec
-				"AbstruseEnthusiasticWalrusPRChase", // Slabzy 8sec
-				"ObeseEnticingStinkbugPipeHype-Je5RAHDYA2a-JNH8" // John 12sec
-			];
+      function loadNextClip() {
+        current = (current + 1) % clips.length;
+        player.src = `https://clips.twitch.tv/embed?clip=${clips[current]}&parent=ausr-bot.online&autoplay=true`;
+      }
 
-			const clipDurations = [12, 27, 10, 31, 11, 20, 21, 8, 12]; // in seconds
-			let current = 0;
-			const player = document.getElementById("twitchPlayer");
+      function startClipCycle() {
+        setTimeout(() => {
+          loadNextClip();
+          startClipCycle();
+        }, clipDurations[current] * 1000);
+      }
 
-			function loadNextClip() {
-				current = (current + 1) % clips.length;
-				player.src = `https://clips.twitch.tv/embed?clip=${clips[current]}&parent=ausr-bot.online&autoplay=true`;
-			}
-
-			function startClipCycle() {
-				setTimeout(() => {
-					loadNextClip();
-					startClipCycle();
-				}, clipDurations[current] * 1000);
-			}
-
-			startClipCycle();
-		</script>
-
-		<!-- Scripts -->
-		<script src="assets/js/main.js"></script>
-	</body>
+      startClipCycle();
+    </script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
