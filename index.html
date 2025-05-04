@@ -10,25 +10,23 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			/* Responsive Twitch Clip Embed */
-			.responsive-clip {
-				position: relative;
-				width: 100%;
-				max-width: 960px;
-				margin: 0 auto;
-				padding-top: 56.25%; /* 16:9 Aspect Ratio */
-			}
+<style>
+  .clip-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 2em auto;
+  }
 
-			.responsive-clip iframe {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				border: none;
-			}
-		</style>
+  .clip-wrapper iframe {
+    width: 100%;
+    max-width: 960px;
+    aspect-ratio: 16 / 9;
+    border: none;
+  }
+</style>
 	</head>
 	<body class="is-preload">
 
@@ -50,16 +48,16 @@
 		</nav>
 
 		<!-- Twitch Clips Section -->
-		<section id="twitch-clips" style="margin: 2em auto; text-align: center;">
-			<h2>Featured Twitch Clips</h2>
-			<div class="responsive-clip">
-				<iframe
-					id="twitchPlayer"
-					allowfullscreen
-					src="https://clips.twitch.tv/embed?clip=EsteemedRepleteLionPunchTrees-ZZZFbwwWceuX9-le&parent=ausr-bot.online&autoplay=true">
-				</iframe>
-			</div>
-		</section>
+<section id="twitch-clips">
+  <h2 style="text-align:center;">Featured Twitch Clips</h2>
+  <div class="clip-wrapper">
+    <iframe
+      id="twitchPlayer"
+      allowfullscreen
+      src="https://clips.twitch.tv/embed?clip=EsteemedRepleteLionPunchTrees-ZZZFbwwWceuX9-le&parent=ausr-bot.online&autoplay=true">
+    </iframe>
+  </div>
+</section>
 
 		<!-- Twitch Clips Script -->
 		<script>
