@@ -1,3 +1,4 @@
+AUSr_Krip passed Amphibious [BW] with 153 faults on 19/05/2025
 AUSr_Krip passed Flubber with 250 faults on 19/05/2025
 AUSr_Krip passed Blueberry Diamond NJ with 194 faults on 19/05/2025
 AUSr_Krip passed Feeling Cute [BW] with 279 faults on 05/05/2025
