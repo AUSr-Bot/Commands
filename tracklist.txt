@@ -1,3 +1,4 @@
+AUSr_Krip passed BLUECOMB [BW] with 161 faults on 29/05/2025
 AUSr_Krip passed Snollygoster with 168 faults on 29/05/2025
 AUSr_Krip passed -Urewera- with 228 faults on 23/05/2025
 AUSr_Krip passed Technical crusade with 185 faults on 23/05/2025
