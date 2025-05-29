@@ -65,32 +65,23 @@
             It can also auto-post those clips to your Discord via a webhook.
         </p>
 
-        <h3>📥 Getting Started</h3>
-        <ol>
-            <li>Go to <a href="https://www.twitch.tv/AUSr_Clips" target="_blank">https://www.twitch.tv/AUSr_Clips</a></li>
-            <li>Type <code>!join</code> in chat to invite the bot to your channel.</li>
-            <li>Type <code>/mod AUSr_Clips</code> in your channel to give it permission to post links.</li>
-            <li>To link your Discord webhook, use <code>!join [webhook]</code> or <code>!webhook [webhook]</code>.</li>
-        </ol>
-
-        <h3>🔧 How to Get Your Discord Webhook</h3>
-            <p>Want your clips to post straight into a Discord channel? Here's how to get your webhook URL:</p>
-
-        <ol>
-            <li>Open Discord and go to the **channel** where you want the clips to appear.</li>
-            <li>Click the <strong>⚙️ gear icon</strong> (Edit Channel) next to the channel name.</li>
-            <li>Go to the <strong>Integrations</strong> tab.</li>
-            <li>Click <strong>"Create Webhook"</strong>.</li>
-            <li>Give it a name (like <code>AUSr_Clips</code>) and pick an avatar if you want.</li>
-            <li>Click <strong>"Copy Webhook URL"</strong>.</li>
-            <li>Now go back to <a href="https://www.twitch.tv/AUSr_Clips" target="_blank">AUSr_Clips on Twitch</a> and type:<br>
-                <code>!join [paste your webhook URL here]</code></li>
-        </ol>
-
-<p>✅ That’s it! Now every time a clip is made using <code>!clip</code>, the link will also post to your Discord channel.</p>
-
-
-        <h3>🛠 Commands</h3>
+        
+<h3>📥 Getting Started</h3>
+<h4>🔧 How to Get Your Discord Webhook</h4>
+<ol>
+    <li>Open Discord and go to the <strong>channel</strong> where you want the clips to appear.</li>
+    <li>Click the ⚙️ gear icon (Edit Channel) next to the channel name.</li>
+    <li>Go to the <strong>Integrations</strong> tab.</li>
+    <li>Click <strong>"Create Webhook"</strong>.</li>
+    <li>Give it a name (like <code>AUSr_Clips</code>) and pick an avatar if you want.</li>
+    <li>Click <strong>"Copy Webhook URL"</strong>.</li>
+    <li>Now go to <a href="https://www.twitch.tv/AUSr_Clips" target="_blank">AUSr_Clips on Twitch</a>.</li>
+    <li>In chat, type: <code>!join [paste your webhook URL here]</code></li>
+    <li>Then go to <strong>your own channel</strong> and type: <code>/mod AUSr_Clips</code> — this gives the bot permission to post links.</li>
+    <li>To update your webhook later, type: <code>!webhook [paste your new webhook URL here]</code></li>
+</ol>
+<p>✅ That’s it! When someone uses <code>!clip</code>, the clip link will also post in your Discord channel.</p>
+<h3>🛠 Commands</h3>
         <table>
             <tr><th>Command</th><th>Description</th></tr>
             <tr><td>!join</td><td>Joins your Twitch channel.</td></tr>
