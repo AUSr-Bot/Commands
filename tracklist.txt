@@ -1,3 +1,4 @@
+AUSr_Krip passed Filament with 135 faults on 01/06/2025
 AUSr_Krip passed Upca [BW] with 210 faults on 30/05/2025
 AUSr_Krip passed BLUECOMB [BW] with 161 faults on 29/05/2025
 AUSr_Krip passed Snollygoster with 168 faults on 29/05/2025
