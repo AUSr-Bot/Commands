@@ -12,7 +12,8 @@
             overflow-y: auto !important;
             display: block !important;
             padding: 2em !important;
-            background-image: url('/assets/images/background.jpg'); /* Default background image */
+            /* Fallback background */
+            background-image: url('/images/bg01.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -20,6 +21,7 @@
     </style>
 </head>
 <body class="is-preload">
+    <div id="bg"></div>
     <header id="header">
         <h1>Passlist</h1>
     </header>
