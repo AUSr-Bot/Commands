@@ -1,0 +1,27 @@
+AUSr_Krip passed Molten with 66 faults on 01/06/2025
+AUSr_Krip passed Mauve [+cps] with 173 faults on 01/06/2025
+AUSr_Krip passed Filament with 135 faults on 01/06/2025
+AUSr_Krip passed Upca [BW] with 210 faults on 30/05/2025
+AUSr_Krip passed BLUECOMB [BW] with 161 faults on 29/05/2025
+AUSr_Krip passed Snollygoster with 168 faults on 29/05/2025
+AUSr_Krip passed -Urewera- with 228 faults on 23/05/2025
+AUSr_Krip passed Technical crusade with 185 faults on 23/05/2025
+AUSr_Krip passed Claveria +cps with 311 faults on 19/05/2025
+AUSr_Krip passed Desert Delight with 140 faults on 19/05/2025
+AUSr_Krip passed Amphibious [BW] with 153 faults on 19/05/2025
+AUSr_Krip passed Flubber with 250 faults on 19/05/2025
+AUSr_Krip passed Blueberry Diamond NJ with 194 faults on 19/05/2025
+AUSr_Krip passed Feeling Cute [BW] with 279 faults on 05/05/2025
+AUSr_Krip passed KC Kotai with 8 faults on 05/05/2025
+AUSr_Krip passed AMG with 27 faults on 05/05/2025
+AUSr_Krip passed Slippery Slides BW (donkey) with 31 faults on 05/05/2025
+AUSr_Krip passed Aurex [BW] with 17 faults on 05/05/2025
+AUSr_Krip passed FANCY [BW] with 184 faults on 05/05/2025
+AUSr_Krip passed Cool Climbing with 58 faults on 05/05/2025
+AUSr_Krip passed Instrument [Ez] with 48 faults on 05/05/2025
+AUSr_Krip passed Throttle Flex with 70 faults on 05/05/2025
+AUSr_Krip passed Diwaron [BW] with 322 faults on 05/05/2025
+AUSr_Krip passed Donkey Bounces with 3 faults on 28/01/2025
+AUSr_Krip passed Kaizen [50 CP] with 225 faults on 15/01/2025
+AUSr_Krip passed Eclipse Protocol (Full) with 218 faults on 24/12/2024
+AUSr_Krip passed Ephemeral with 127 faults on 24/12/2024
