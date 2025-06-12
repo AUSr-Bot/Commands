@@ -1,3 +1,4 @@
+ausr_krip passed testy21 with 224 faults on 12/06/2025
 ausr_krip passed testy15 with 223 faults on 12/06/2025
 ausr_krip passed testy14 with 222 faults on 12/06/2025
 ausr_krip passed testy13 with 120 faults on 12/06/2025
