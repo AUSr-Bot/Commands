@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,10 +15,7 @@
     </style>
 </head>
 <body class="is-preload">
-
-    <header id="header">
-        <h1>Passlist</h1>
-    </header>
+    <header id="header"><h1>Passlist</h1></header>
     <nav id="menu">
         <ul class="links">
             <li><a href="/index.html">Home</a></li>
@@ -31,28 +27,20 @@
     <ol id="tracklist"></ol>
     <script>
         fetch('/tracklists/ausr_krip.txt')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Failed to fetch /tracklists/ausr_krip.txt: ' + response.statusText);
-                }
-                return response.text();
-            })
+            .then(res => res.ok ? res.text() : Promise.reject(res.statusText))
             .then(data => {
-                const tracks = data.split('\n').filter(line => line.trim() !== '');
-                const tracklistElement = document.getElementById('tracklist');
-                tracks.forEach(track => {
+                const tracklist = document.getElementById('tracklist');
+                data.split('\n').filter(Boolean).forEach(line => {
                     const li = document.createElement('li');
-                    li.textContent = track.trim();
-                    tracklistElement.appendChild(li);
+                    li.textContent = line;
+                    tracklist.appendChild(li);
                 });
             })
-            .catch(error => {
-                console.error('Error fetching tracklist:', error);
-                const tracklistElement = document.getElementById('tracklist');
-                tracklistElement.innerHTML = '<li>Error loading tracks. Please try again later.</li>';
+            .catch(err => {
+                document.getElementById('tracklist').innerHTML = '<li>Error loading tracks.</li>';
+                console.error(err);
             });
     </script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
-            
