@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AUSr_Bot - Passlist</title>
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
     <style>
         html, body {
             height: auto !important;
@@ -20,16 +20,23 @@
     </header>
     <nav id="menu">
         <ul class="links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="commands.html">Commands</a></li>
-            <li><a href="channels.html">Channels</a></li>
-            <li><a href="ausr_krip.html">ausr_krip</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/commands.html">Commands</a></li>
+            <li><a href="/channels.html">Channels</a></li>
+            <li><a href="/users/ausr_krip.html">ausr_krip</a></li>
         </ul>
     </nav>
-    <ol id="tracklist"></ol>
+    <ol id="tracklist">
+        <!-- Populated by JavaScript: <li>ausr_krip passed testy3 with 50 faults on 12/06/2025</li> -->
+    </ol>
     <script>
-        fetch('ausr_krip.txt')
-            .then(response => response.text())
+        fetch('/tracklists/ausr_krip.txt')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch /tracklists/ausr_krip.txt: ' + response.statusText);
+                }
+                return response.text();
+            })
             .then(data => {
                 const tracks = data.split('\n').filter(line => line.trim() !== '');
                 const tracklistElement = document.getElementById('tracklist');
@@ -39,8 +46,12 @@
                     tracklistElement.appendChild(li);
                 });
             })
-            .catch(error => console.error('Error fetching tracklist:', error));
+            .catch(error => {
+                console.error('Error fetching tracklist:', error);
+                const tracklistElement = document.getElementById('tracklist');
+                tracklistElement.innerHTML = '<li>Error loading tracks. Please try again later.</li>';
+            });
     </script>
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>
