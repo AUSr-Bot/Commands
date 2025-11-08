@@ -1,6 +1,3 @@
-ausr_krip passed trackname 2 with 11 faults on 08/11/2025
-ausr_krip passed testy with 99 faults on 14/06/2025
-ausr_krip passed test1 with 99 faults on 14/06/2025
 ausr_krip passed randomtesttrack with 69 faults on 13/06/2025
 AUSr_Krip passed Molten with 66 faults on 01/06/2025
 AUSr_Krip passed Mauve [+cps] with 173 faults on 01/06/2025
