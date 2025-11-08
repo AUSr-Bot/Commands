@@ -1,2 +1,3 @@
+rodvinsky passed RK9-Heff Juan WSTR with 13 faults on 08/11/2025
 rodvinsky passed Impaler with 0 faults on 08/11/2025
 rodvinsky passed [FM] Baransu with 2 faults on 08/11/2025
