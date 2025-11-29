@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xoalliecatox - Passlist</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        html, body {
+            height: auto !important;
+            overflow-y: auto !important;
+            display: block !important;
+            padding: 2em !important;
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <header id="header"><h1>Passlist</h1></header>
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/commands.html">Commands</a></li>
+            <li><a href="/channels.html">Channels</a></li>
+            <li><a href="/clips.html">AUSr_Clips</a></li>
+        </ul>
+    </nav>
+    <ol id="tracklist"></ol>
+    <script>
+        fetch('/tracklists/xoalliecatox.txt')
+            .then(res => res.ok ? res.text() : Promise.reject(res.statusText))
+            .then(data => {
+                const tracklist = document.getElementById('tracklist');
+                data.split('\n').filter(Boolean).forEach(line => {
+                    const li = document.createElement('li');
+                    li.textContent = line;
+                    tracklist.appendChild(li);
+                });
+            })
+            .catch(err => {
+                document.getElementById('tracklist').innerHTML = '<li>Error loading tracks.</li>';
+                console.error(err);
+            });
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
