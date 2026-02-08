@@ -47,100 +47,123 @@
         </nav>
 
         <h2>Commands</h2>
-    <table>
-        <tr>
-            <th>Command</th>
-            <th>Description</th>
-        </tr>
-        <tr><td>@AUSr_Bot</td><td>@ the bot with your questions.</td></tr>
-        <tr><td>!shoutout @Username</td><td>Check out @username at <a href="https://twitch.tv/AUSr_Bot">https://twitch.tv/AUSr_Bot</a> — they were last playing game name. Give them a follow! Automatic shoutout for raids.</td></tr>
-        <tr><td>!uptime</td><td>Shows the how long the stream has been live.</td></tr>
-        <tr><td>!clip</td><td>Clips the stream and posts the link in chat.</td></tr>
-        <tr><td>!8ball</td><td>Magic 8-Ball response.</td></tr>
-        <tr><td>!watchtime</td><td>@username, Across all channels with @AUSr_Bot you've watched for 7 days, 0 hour, 27 minutes, and 33 seconds.</td></tr>
-        <tr><td>!points</td><td>Shows how many points you have across all channels using AUSr_Bot. 1 point per message sent.</td></tr>
-        <tr><td>!gamble</td><td>Usage: !gamble number or all.</td></tr>
-        <tr><td>!duel</td><td>Usage: !duel @username amount.</td></tr>
-        <tr><td>!top</td><td>Shows the top 5 users points.</td></tr>
-        <tr><td>!addtrack - !tr</td><td>Request a track to play.</td></tr>
-        <tr><td>!tracklist</td><td>Shows the last 5 tracks added. Veiw the full list here: <a href="https://tinyurl.com/addtracklist">Tracklist</a></td></tr>
-        <tr><td>!race</td><td>Random Gran Turismo 7 track from anywhere on career.</td></tr>
-        <tr><td>!track</td><td>Random Trials Rising track from anywhere on career.</td></tr>
-        <tr><td>!bike</td><td>Random Trials Rising bike.</td></tr>
-        <tr><td>!lvl 1 to !lvl 7</td><td>Random ninja track in Track Central.</td></tr>
-        <tr><td>!base 1 to !base 7</td><td>Baseline ninja tracks.</td></tr>
-    </table>
-    
-<h2>MOD Commands</h2>
-<table>
-    <tr>
-        <th>Command</th>
-        <th>Description</th>
-        <th>Variables</th>
-    </tr>
-    <tr>
-        <td>@AUSr_Bot</td>
-        <td>Usage: @AUSr_Bot activate dan mode.</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>@AUSr_Bot</td>
-        <td>Usage: @AUSr_Bot deactivate dan mode.</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>!addcom</td>
-        <td>Usage: !addcom !commandname command text.</td>
-        <td>&lt;@targetusername&gt;</td>
-    </tr>
-    <tr>
-        <td>!delcom</td>
-        <td>Usage: !delcom !commandname.</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>!addcount</td>
-        <td>
-            Usage: !addcount !countername.<br>
-            Example: !addcount !deaths "You have died &lt;counter&gt; times."<br><br>
-            <b>Increment by 1:</b><br>
-            <code>!deaths +</code> → "You have died 1 times."<br><br>
-            <b>Decrement by 1:</b><br>
-            <code>!deaths -</code> → "You have died 0 times."<br><br>
-            <b>Increment by a Specific Number:</b><br>
-            <code>!deaths +8</code> → "You have died 8 times."
-        </td>
-        <td>&lt;counter&gt;</td>
-    </tr>
-    <tr>
-        <td>!delcount</td>
-        <td>Usage: !delcount !countername.</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>!addpoints</td>
-        <td>Usage: !addpoints @username 100</td>
-        <td></td>
-    </tr>
-    <tr>
-    <td>!pass - !passed</td>
-    <td>
-        Want to keep a record of the tracks you've passed? Use this command!<br>
-        Usage: <code>!pass &lt;TrackName&gt; &lt;Faults&gt;</code><br>
-        Example: <code>!pass Inferno IV 10</code>
-    </td>
-</tr>
-</table>
+        <table>
+            <tr>
+                <th>Command</th>
+                <th>Description</th>
+            </tr>
+            <tr><td>@AUSr_Bot</td><td>@ the bot with your questions.</td></tr>
+            <tr><td>!shoutout @Username</td><td>Check out @username at <a href="https://twitch.tv/AUSr_Bot">https://twitch.tv/AUSr_Bot</a> — they were last playing game name. Give them a follow! Automatic shoutout for raids.</td></tr>
+            <tr><td>!uptime</td><td>Shows the how long the stream has been live.</td></tr>
+            <tr><td>!clip</td><td>Clips the stream and posts the link in chat.</td></tr>
+            <tr><td>!8ball</td><td>Magic 8-Ball response.</td></tr>
+            <tr><td>!watchtime</td><td>@username, Across all channels with @AUSr_Bot you've watched for 7 days, 0 hour, 27 minutes, and 33 seconds.</td></tr>
+            <tr><td>!points</td><td>Shows how many points you have across all channels using AUSr_Bot. 1 point per message sent.</td></tr>
+            <tr><td>!gamble</td><td>Usage: !gamble number or all.</td></tr>
+            <tr><td>!duel</td><td>Usage: !duel @username amount.</td></tr>
+            <tr><td>!top</td><td>Shows the top 5 users points.</td></tr>
+            <tr><td>!accountage · !accage · !age</td><td>Shows how old a Twitch account is.<br>Usage: <code>!age</code> or <code>!age @username</code></td></tr>
+            <tr><td>!addtrack - !tr</td><td>Request a track to play.</td></tr>
+            <tr><td>!tracklist</td><td>Shows the last 5 tracks added. Veiw the full list here: <a href="https://tinyurl.com/addtracklist">Tracklist</a></td></tr>
+            <tr><td>!race</td><td>Random Gran Turismo 7 track from anywhere on career.</td></tr>
+            <tr><td>!track</td><td>Random Trials Rising track from anywhere on career.</td></tr>
+            <tr><td>!bike</td><td>Random Trials Rising bike.</td></tr>
+            <tr><td>!lvl 1 to !lvl 7</td><td>Random ninja track in Track Central.</td></tr>
+            <tr><td>!base 1 to !base 7</td><td>Baseline ninja tracks.</td></tr>
+        </table>
 
-    <h2>Test it here</h2>
-<iframe id="twitch-chat-embed"
-        src="https://www.twitch.tv/embed/ausr_bot/chat?parent=ausr-bot.online&theme=darkpopout" 
-        height="500"
-        width="350">
-</iframe>
-    <script src="assets/js/main.js"></script>
+        <h2>MOD Commands</h2>
+        <table>
+            <tr>
+                <th>Command</th>
+                <th>Description</th>
+                <th>Variables</th>
+            </tr>
+            <tr>
+                <td>@AUSr_Bot</td>
+                <td>Usage: @AUSr_Bot activate dan mode.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>@AUSr_Bot</td>
+                <td>Usage: @AUSr_Bot deactivate dan mode.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>!addcom</td>
+                <td>Usage: !addcom !commandname command text.</td>
+                <td>&lt;@targetusername&gt;</td>
+            </tr>
+            <tr>
+                <td>!delcom</td>
+                <td>Usage: !delcom !commandname.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>!addcount</td>
+                <td>
+                    Usage: !addcount !countername.<br>
+                    Example: !addcount !deaths "You have died &lt;counter&gt; times."<br><br>
+                    <b>Increment by 1:</b><br>
+                    <code>!deaths +</code> → "You have died 1 times."<br><br>
+                    <b>Decrement by 1:</b><br>
+                    <code>!deaths -</code> → "You have died 0 times."<br><br>
+                    <b>Increment by a Specific Number:</b><br>
+                    <code>!deaths +8</code> → "You have died 8 times."
+                </td>
+                <td>&lt;counter&gt;</td>
+            </tr>
+            <tr>
+                <td>!delcount</td>
+                <td>Usage: !delcount !countername.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>!addpoints</td>
+                <td>Usage: !addpoints @username 100</td>
+                <td></td>
+            </tr>
+
+            <!-- ✅ NEW: Command enable/disable manager -->
+            <tr>
+                <td>!command</td>
+                <td>
+                    Enable or disable bot commands (mod / broadcaster only).<br><br>
+                    <b>Disable a command:</b><br>
+                    <code>!command off ping</code><br><br>
+                    <b>Enable a command:</b><br>
+                    <code>!command on ping</code><br><br>
+                    <b>Disable ALL commands:</b><br>
+                    <code>!command off *</code><br><br>
+                    <b>Enable ALL commands:</b><br>
+                    <code>!command on *</code><br><br>
+                    <b>Show disabled commands:</b><br>
+                    <code>!command list</code>
+                </td>
+                <td>
+                    &lt;on|off&gt;<br>
+                    &lt;command|*&gt;
+                </td>
+            </tr>
+
+            <tr>
+                <td>!pass - !passed</td>
+                <td>
+                    Want to keep a record of the tracks you've passed? Use this command!<br>
+                    Usage: <code>!pass &lt;TrackName&gt; &lt;Faults&gt;</code><br>
+                    Example: <code>!pass Inferno IV 10</code>
+                </td>
+                <td>&lt;TrackName&gt; &lt;Faults&gt;</td>
+            </tr>
+        </table>
+
+        <h2>Test it here</h2>
+        <iframe id="twitch-chat-embed"
+                src="https://www.twitch.tv/embed/ausr_bot/chat?parent=ausr-bot.online&theme=darkpopout"
+                height="500"
+                width="350">
+        </iframe>
+
+        <script src="assets/js/main.js"></script>
 </body>
 </html>
-
-
-
