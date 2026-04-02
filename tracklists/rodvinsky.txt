@@ -1,3 +1,4 @@
+rodvinsky passed [CP] Maximus [EZ] #1 with 36 faults on 02/04/2026
 rodvinsky passed Famished with 183 faults on 15/11/2025
 rodvinsky passed Rusted with 343 faults on 15/11/2025
 rodvinsky passed Track 4YOU with 0 faults on 14/11/2025
