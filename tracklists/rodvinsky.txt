@@ -1,3 +1,4 @@
+rodvinsky passed Rusty with 50 faults on 06/07/2026
 rodvinsky passed (CW) Green Mile with 0 faults on 22/05/2026
 rodvinsky passed Restless Dreams [EZ] with 37 faults on 22/05/2026
 rodvinsky passed Dust with 100 faults on 22/05/2026
