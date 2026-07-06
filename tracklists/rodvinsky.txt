@@ -1,3 +1,4 @@
+rodvinsky passed Cacdurae with 121 faults on 06/07/2026
 rodvinsky passed [QBC] Sandu with 26 faults on 06/07/2026
 rodvinsky passed Vertical Concret with 17 faults on 06/07/2026
 rodvinsky passed Bombe run with 24 faults on 06/07/2026
