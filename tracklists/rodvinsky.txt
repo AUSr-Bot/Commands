@@ -1,3 +1,4 @@
+rodvinsky passed Vertical Concret with 17 faults on 06/07/2026
 rodvinsky passed Bombe run with 24 faults on 06/07/2026
 rodvinsky passed (DA) DAs Base ex with 20 faults on 06/07/2026
 rodvinsky passed Peach Fuzz with 16 faults on 06/07/2026
